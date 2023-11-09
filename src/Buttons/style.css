@@ -1,0 +1,24 @@
+.buttons__button {
+    border: none;
+    background: none;
+    color: hsl(180, 100%, 25%);
+    margin-right: 15px;
+    transition: filter 0.5s;
+}
+
+.buttons__button:hover {
+    filter: saturate(350%);
+}
+
+@media (max-width: 767px) {
+    .buttons__button {
+        margin: 10px auto;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 15px;
+    }
+}
+
+.buttons__button:disabled {
+    color: hsla(180, 22%, 62%, 0.603);
+}
