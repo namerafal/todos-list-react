@@ -25,6 +25,7 @@ In the header section of the task list, there is a button of hiding completed ta
    |                   |   GRID            |  Immutability Concept |
    |                   |   FlexBox         |  REACT            |
    |                   |   MediaQueries    |  JSX              |
+   |                   |                   |  React Hooks      |
 
 <br>
 
