@@ -6,6 +6,8 @@ In the header section of the task list, there is a button of hiding completed ta
 ## OG Image
 ![Todo List png](https://github.com/namerafal/todos-list-react/blob/main/public/todo_list_og.png?raw=true)
 
+
+
 ## Demo:
 ![todo list demo bb](https://github.com/namerafal/TODO-LIST/assets/121634145/307c4438-7c53-4d67-83a3-670661a29f0b)
 
