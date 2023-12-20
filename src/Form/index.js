@@ -2,21 +2,23 @@ import { useState } from "react";
 import "./style.css";
 
 const Form = ({ addNewTask }) => {
-  const [content, setNewTaskContent] = useState("");
+  const [newTaskContent, setNewTaskContent] = useState("");
+  const trimmedNewTaskContent = newTaskContent.trim();
 
   const onFormSubmit = (event) => {
     event.preventDefault();
-    
-    if (content !== "") {
-      addNewTask(content.trim());
-      setNewTaskContent("");
+
+    if (!trimmedNewTaskContent) {
+      return;
     }
+    addNewTask(trimmedNewTaskContent);
+    setNewTaskContent("");
   };
 
   return (
     <form className="form" onSubmit={onFormSubmit} >
       <input
-        value={content}
+        value={newTaskContent}
         className="form__input"
         placeholder="Co jest do zrobienia?"
         onChange={({ target }) => setNewTaskContent(target.value)}
