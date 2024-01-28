@@ -10,7 +10,7 @@ import Container from "./Container";
 function App() {
   const [hideDone, setHideDone] = useState(false);
   const { tasks, setTasks } = TempStorage();
-   
+
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
   };
@@ -67,15 +67,10 @@ function App() {
         }
         body={
           <Tasks
-            // tasks={tasks}
-            // hideDone={hideDone}
-            // removeTask={removeTask}
-            // toggleTaskDone={toggleTaskDone}
-
-            toggleTaskDone={toggleTaskDone}
-            removeTask={removeTask}
             tasks={tasks}
             hideDone={hideDone}
+            removeTask={removeTask}
+            toggleTaskDone={toggleTaskDone}
           />
         }
       />
