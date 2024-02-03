@@ -1,15 +1,26 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Form from "./Form";
-import { TempStorage } from "./TempStorage";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
 import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
 
+const TempStorageTasks = () => {
+  const tasksFromLocalStorage = localStorage.getItem("tasks");
+
+  return tasksFromLocalStorage
+    ? JSON.parse(tasksFromLocalStorage)
+    : [];
+};
+
 function App() {
   const [hideDone, setHideDone] = useState(false);
-  const { tasks, setTasks } = TempStorage();
+  const [tasks, setTasks] = useState(TempStorageTasks);
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
 
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
