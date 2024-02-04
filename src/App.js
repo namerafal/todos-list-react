@@ -7,11 +7,7 @@ import Header from "./Header";
 import Container from "./Container";
 
 const TempStorageTasks = () => {
-  const tasksFromLocalStorage = localStorage.getItem("tasks");
-
-  return tasksFromLocalStorage
-    ? JSON.parse(tasksFromLocalStorage)
-    : [];
+  return JSON.parse(localStorage.getItem("tasks")) || [];
 };
 
 function App() {
