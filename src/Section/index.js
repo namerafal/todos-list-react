@@ -1,15 +1,15 @@
-import "./style.css";
+import { Section, Header, SectionTasks, SectionTitle } from "./styled";
 
-const Section = ({ header, title, body, extraHeaderContent }) => (
-  <section className="section">
-    <header className="section__header">
-      <h2 className="section__title">{title}</h2>
+const AppSection = ({ title, body, extraHeaderContent }) => (
+  <Section>
+    <Header>
+      <SectionTitle>{title}</SectionTitle>
       {extraHeaderContent}
-    </header>
-    <div className="section__body">
+    </Header>
+    <SectionTasks>
       {body}
-    </div>
-  </section>
+    </SectionTasks>
+  </Section>
 );
 
-export default Section;
+export default AppSection;

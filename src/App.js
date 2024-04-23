@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import Form from "./Form";
+import TaskAddingForm from "./Form";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
-import Section from "./Section";
+import AppSection from "./Section";
 import Header from "./Header";
 import Container from "./Container";
 
@@ -56,13 +56,13 @@ function App() {
   return (
     <Container>
       <Header title={"Lista zadań"} />
-      <Section
+      <AppSection
         header={false}
         title="Dodaj nowe zadanie"
-        body={<Form addNewTask={addNewTask} />}
+        body={<TaskAddingForm addNewTask={addNewTask} />}
       />
 
-      <Section
+      <AppSection
         title="Lista zadań"
         extraHeaderContent={
           <Buttons
