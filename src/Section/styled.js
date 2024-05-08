@@ -6,7 +6,7 @@ export const Section = styled.section`
     box-shadow: 0 0 5px hsl(0, 0%, 87%);
 `;
 
-export const Header = styled.header`
+export const SectionHeader = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;

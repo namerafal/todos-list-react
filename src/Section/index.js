@@ -1,11 +1,11 @@
-import { Section, Header, SectionTasks, SectionTitle } from "./styled";
+import { Section, SectionHeader, SectionTitle, SectionTasks } from "./styled";
 
 const AppSection = ({ title, body, extraHeaderContent }) => (
   <Section>
-    <Header>
+    <SectionHeader>
       <SectionTitle>{title}</SectionTitle>
       {extraHeaderContent}
-    </Header>
+    </SectionHeader>
     <SectionTasks>
       {body}
     </SectionTasks>
