@@ -23,6 +23,7 @@ const TaskAddingForm = ({ addNewTask }) => {
   return (
     <Form onSubmit={onFormSubmit} >
       <Input
+        name="contentInput"
         value={newTaskContent}
         ref={inputRef}
         placeholder="Co jest do zrobienia?"
