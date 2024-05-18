@@ -5,7 +5,8 @@ import Tasks from "./Tasks";
 import Buttons from "./Buttons";
 import AppSection from "./Section";
 import Header from "./Header";
-import Container from "./Container";
+// import Container from "./Container";
+import { MainContainer } from "./styled";
 
 function App() {
   const [hideDone, setHideDone] = useState(false);
@@ -22,7 +23,7 @@ function App() {
   };
 
   return (
-    <Container>
+    <MainContainer>
       <Header title={"Lista zadań"} />
       <AppSection
         title="Dodaj nowe zadanie"
@@ -48,7 +49,7 @@ function App() {
           />
         }
       />
-    </Container>
+    </MainContainer>
   );
 }
 

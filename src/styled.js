@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
     html {
@@ -14,4 +15,10 @@ export const GlobalStyles = createGlobalStyle`
         font-family: 'Montserrat', sans-serif;
         word-break: break-word;
     } 
+`;
+
+export const MainContainer = styled.div`
+    max-width: 900px;
+    padding: 20px;
+    margin: 0 auto;
 `;
