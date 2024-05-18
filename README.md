@@ -4,7 +4,7 @@ This is an example of a simple task list where you can add as many tasks as you 
 In the header section of the task list, there is a button of hiding completed tasks, and the button, which marks all tasks as completed.
 
 ## OG Image
-![Todo List png](https://github.com/namerafal/todos-list-react/blob/main/public/todo_list_og.png?raw=true)
+![Todo List png](https://github.com/namerafal/todos-list-react/blob/main/todo_list_og.png?raw=true)
 
 
 
