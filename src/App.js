@@ -6,7 +6,7 @@ import Buttons from "./Buttons";
 import AppSection from "./Section";
 import Header from "./Header";
 // import Container from "./Container";
-import { MainContainer } from "./styled";
+import { MainContainer } from "./GlobalStyle";
 
 function App() {
   const [hideDone, setHideDone] = useState(false);
