@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Button = styled.button`
     border: none;
     background: none;
-    color: hsl(180, 100%, 25%);
+    color: ${({ theme }) => theme.color.teal};
     margin-right: 15px;
     transition: filter 0.5s;
 
@@ -11,14 +11,17 @@ export const Button = styled.button`
             filter: saturate(350%);
         }
 
-        &:disabled {
-            color: hsla(180, 22%, 62%, 0.603);
+        &:active {
+            filter: brightness(110%);
         }
 
-        @media (max-width: 767px) {
+        &:disabled {
+            color: ${({ theme }) => theme.color.alto};
+        }
+
+        @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
             margin: 10px auto;
             display: flex;
-            flex-direction: column;
             padding-bottom: 15px;
         }
 `;

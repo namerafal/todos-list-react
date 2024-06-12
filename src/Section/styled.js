@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Section = styled.section`
     margin: 10px 0;
-    background-color: hsl(0, 0%, 100%);
-    box-shadow: 0 0 5px hsl(0, 0%, 87%);
+    background-color: ${({ theme }) => theme.color.white};
+    box-shadow: 0 0 5px ${({ theme }) => theme.color.alto};
 `;
 
 export const SectionHeader = styled.header`
@@ -11,19 +11,19 @@ export const SectionHeader = styled.header`
     align-items: center;
     justify-content: space-between;
 
-    @media (max-width: 767px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         flex-flow: column;
         align-items: stretch; 
     }
 `;
 
 export const SectionTitle = styled.h2`
-    font-size: 20px;
-    padding: 20px;
     margin: 0px;
+    padding: 20px;
+    font-size: 20px;
 `;
 
 export const SectionTasks = styled.div`
-    border-top: 1px solid hsl(0, 0%, 87%);
+    border-top: 1px solid ${({ theme }) => theme.color.alto};
     padding: 20px;
 `;

@@ -11,7 +11,7 @@ export const Item = styled.li`
     grid-template-columns: auto 1fr auto;
     align-items: center;
     grid-gap: 10px;
-    border-bottom: 1px solid hsl(0, 0%, 87%);
+    border-bottom: 1px solid ${({ theme }) => theme.color.alto};
     padding: 10px;
 
     ${({ hidden }) => hidden && css`
@@ -30,15 +30,15 @@ export const TaskButton = styled.button`
      border: none;
      width: 30px;
      height: 30px;
-     color: hsl(0, 0%, 100%);
+     color: ${({ theme }) => theme.color.white};
      transition: filter 0.5s;
 
        ${({ $toggleDone }) => $toggleDone && css`
-            background-color: hsl(122, 65%, 29%);
+            background-color: ${({ theme }) => theme.color.forestGreen};
        `};
 
         ${({ $remove }) => $remove && css`
-             background-color: hsl(348, 83%, 47%);
+             background-color: ${({ theme }) => theme.color.crimson};
         `};
 
           &:hover {
@@ -48,7 +48,7 @@ export const TaskButton = styled.button`
           &:active {
              filter: brightness(1.4);
              transition: none;
-             box-shadow: inset 0px 2px 3px 2px hsla(180, 14%, 20%, 0.451);
+             box-shadow: inset 0px 2px 3px 2px ${({ theme }) => theme.color.outerSpace};
           }
      }
 `;
