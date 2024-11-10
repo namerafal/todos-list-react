@@ -17,6 +17,7 @@ const Form = () => {
     if (!trimmedNewTaskContent) {
       return;
     }
+    
     dispatch(addTask({
       content: trimmedNewTaskContent,
       done: false,
