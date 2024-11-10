@@ -9,50 +9,50 @@ export const useTasks = () => {
 
         return JSON.parse(localStorageValue);
     };
-    const [tasks, setTasks] = useState(getInitialState);
+    const [tasks] = useState(getInitialState);
 
     useEffect(() => {
         localStorage.setItem("tasks", JSON.stringify(tasks));
     }, [tasks]);
 
-    const addNewTask = (content) => {
-        setTasks(task => [
-            ...tasks,
-            {
-                content,
-                done: false,
-                id: tasks.length ? tasks[task.length - 1].id + 1 : 1,
-            }
-        ]);
-    };
+    // const addNewTask = (content) => {
+    //     setTasks(task => [
+    //         ...tasks,
+    //         {
+    //             content,
+    //             done: false,
+    //             id: tasks.length ? tasks[task.length - 1].id + 1 : 1,
+    //         }
+    //     ]);
+    // };
 
-    const removeTask = (id) => {
-        setTasks(tasks => tasks.filter(task => task.id !== id));
-    };
+    // const removeTask = (id) => {
+    //     setTasks(tasks => tasks.filter(task => task.id !== id));
+    // };
 
 
-    const toggleTaskDone = (id) => {
-        setTasks(tasks => tasks.map(task => {
-            if (task.id === id) {
-                return { ...task, done: !task.done };
-            }
-            return task;
-        }));
-    };
+    // const toggleTaskDone = (id) => {
+    //     setTasks(tasks => tasks.map(task => {
+    //         if (task.id === id) {
+    //             return { ...task, done: !task.done };
+    //         }
+    //         return task;
+    //     }));
+    // };
 
-    const allTasksDone = () => {
-        setTasks(tasks => tasks.map(task => ({
-            ...task,
-            done: true,
-        })));
-    };
+    // const allTasksDone = () => {
+    //     setTasks(tasks => tasks.map(task => ({
+    //         ...task,
+    //         done: true,
+    //     })));
+    // };
 
 
     return {
-        tasks,
-        addNewTask,
-        removeTask,
-        toggleTaskDone,
-        allTasksDone
+        // tasks,
+        // addNewTask,
+        // removeTask,
+        // toggleTaskDone,
+        // allTasksDone
     };
 };
