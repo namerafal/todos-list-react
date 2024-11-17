@@ -1,9 +1,9 @@
-import Form from "./Form";
-import TasksList from "./TasksList";
-import Buttons from "./Buttons";
-import AppSection from "../../common/section";
-import Header from "../../common/Header";
 import { MainContainer } from "../../GlobalStyle";
+import Header from "../../common/Header";
+import AppSection from "../../common/section";
+import Form from "./Form";
+import Buttons from "./Buttons";
+import TasksList from "./TasksList";
 
 function Tasks() {
   return (
