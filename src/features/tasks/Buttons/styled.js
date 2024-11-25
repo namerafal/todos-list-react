@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.div``;
 
 export const Button = styled.button`
+    cursor: pointer;
     border: none;
     background: none;
     color: ${({ theme }) => theme.color.teal};
@@ -19,6 +20,7 @@ export const Button = styled.button`
 
         &:disabled {
             color: ${({ theme }) => theme.color.alto};
+            filter: none;
         }
 
         @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {

@@ -16,6 +16,7 @@ export const Input = styled.input`
 `;
 
 export const FormButton = styled.button`
+    cursor: pointer;
     background-color:${({ theme }) => theme.color.teal};
     transition: background-color 1s, transform 0.2s;
     border: none;

@@ -27,6 +27,7 @@ export const Content = styled.span`
 
 export const TaskButton = styled.button`
    && {
+     cursor: pointer;
      border: none;
      width: 30px;
      height: 30px;
