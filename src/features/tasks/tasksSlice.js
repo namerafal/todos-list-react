@@ -1,11 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { getTasksFromLokalStorage } from './tasksLocalStorage';
 
 
 const tasksSlice = createSlice({
     name: 'tasks',
     initialState: {
-        tasks: [],
+        tasks: getTasksFromLokalStorage(),
         hideDone: false,
+        isLoading: false,
     },
     reducers: {
         addTask: ({ tasks }, { payload: task }) => {
@@ -26,20 +28,34 @@ const tasksSlice = createSlice({
         removeTask: (state, { payload: taskId }) => {
             state.tasks = state.tasks.filter(task => task.id !== taskId);
         },
+        fetchExampleTasks: (state) => {
+            state.isLoading = true;
+         },
+
+        setTasks: (state, { payload: tasks }) => {
+            state.tasks = tasks;
+            state.isLoading = false;
+        },
+        
     },
 });
+
+
 export const {
     addTask,
     toggleHideDone,
     toggleTaskDone,
     removeTask,
-    allTasksDone
+    allTasksDone,
+    fetchExampleTasks,
+    setTasks    
 } = tasksSlice.actions;
 
 export const selectTasksState = state => state.tasks;
 
 export const selectTasks = state => selectTasksState(state).tasks;
 export const selectHideDone = state => selectTasksState(state).hideDone;
+export const selectIsLoading = state => selectTasksState(state).isLoading;
 export const selectNotEmptyTask = state => selectTasks(state).length > 0;
 export const selectIsSomeTaskDone = state => selectTasks(state).some(({ done }) => done);
 export const selectIsEveryTaskDone = state => selectTasks(state).every(({ done }) => done);
