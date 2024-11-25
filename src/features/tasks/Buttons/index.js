@@ -18,7 +18,7 @@ const Buttons = () => {
 
   const dispatch = useDispatch();
   return (
-    <Wrapper>
+    <Wrapper>     
       {taskNotEmpty && (
         <>
           <Button
