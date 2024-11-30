@@ -7,6 +7,7 @@ import { fetchExampleTasks, selectIsLoading } from "../tasksSlice";
 import Form from "./Form";
 import Buttons from "./Buttons";
 import TasksList from "./TasksList";
+import Search from "./Search";
 
 function TasksPage() {
   const dispatch = useDispatch();
@@ -22,9 +23,14 @@ function TasksPage() {
             {isLoading ? "Pobieram zadania" : "Pobierz przykładowe zadania"}
           </Button>
         }
-
         body={<Form />}
       />
+
+      <AppSection
+        title="Wyszukaj zadnie"
+        body={<Search />}
+      />
+
       <AppSection
         title="Lista zadań"
         extraHeaderContent={<Buttons />}
