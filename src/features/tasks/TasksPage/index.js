@@ -1,14 +1,14 @@
 import { useDispatch, useSelector } from "react-redux";
-import { MainContainer } from "../../GlobalStyle";
-import Header from "../../common/Header";
-import AppSection from "../../common/section";
+import { MainContainer } from "../../../GlobalStyle";
+import Header from "../../../common/Header";
+import AppSection from "../../../common/Section";
 import { Button } from "./Buttons/styled";
-import { fetchExampleTasks, selectIsLoading } from "./tasksSlice";
+import { fetchExampleTasks, selectIsLoading } from "../tasksSlice";
 import Form from "./Form";
 import Buttons from "./Buttons";
 import TasksList from "./TasksList";
 
-function Tasks() {
+function TasksPage() {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
 
@@ -34,4 +34,4 @@ function Tasks() {
   );
 }
 
-export default Tasks;
+export default TasksPage;
