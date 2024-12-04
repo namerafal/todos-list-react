@@ -1,7 +1,9 @@
+import { MainHeader } from "../../GlobalStyle";
+
 const Header = ({ title }) => (
-  <header>
+  <MainHeader>
     <h1>{title}</h1>
-  </header>
+  </MainHeader>
 );
 
 export default Header;

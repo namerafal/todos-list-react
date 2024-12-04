@@ -11,7 +11,7 @@ export const GlobalStyles = createGlobalStyle`
     }
     
     body {
-        background-color: ${({theme}) => theme.color.gallery};
+        background-color: ${({ theme }) => theme.color.gallery};
         font-family: 'Montserrat', sans-serif;
         word-break: break-word;
     } 
@@ -21,4 +21,8 @@ export const MainContainer = styled.div`
     max-width: 900px;
     padding: 20px;
     margin: 0 auto;
+`;
+
+export const MainHeader = styled.header`
+    margin-top:40px;
 `;
