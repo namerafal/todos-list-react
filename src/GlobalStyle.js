@@ -21,6 +21,7 @@ export const MainContainer = styled.div`
     max-width: 900px;
     padding: 20px;
     margin: 0 auto;
+    line-height: 1.5;
 `;
 
 export const MainHeader = styled.header`
