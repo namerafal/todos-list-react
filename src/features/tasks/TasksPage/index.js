@@ -19,15 +19,19 @@ function TasksPage() {
       <AppSection
         title="Dodaj nowe zadanie"
         extraHeaderContent={
-          <Button onClick={() => dispatch(fetchExampleTasks())}>
+          <Button
+            onClick={() => dispatch(fetchExampleTasks())}
+            disabled={isLoading}
+          >
             {isLoading ? "Pobieram zadania" : "Pobierz przykładowe zadania"}
+
           </Button>
         }
         body={<Form />}
       />
 
       <AppSection
-        title="Wyszukaj zadnie"
+        title="Wyszukaj zadanie"
         body={<Search />}
       />
 
