@@ -9,7 +9,8 @@ In the header section of the task list, there is a button of hiding completed ta
 
 
 ## Demo:
-![todo list demo bb](https://github.com/namerafal/TODO-LIST/assets/121634145/307c4438-7c53-4d67-83a3-670661a29f0b)
+![todo list demo bb](https://github.com/namerafal/demo-gif/blob/main/to-do-list-demo-route-redux-saga.gif)
+
 
 ## Page:
  https://namerafal.github.io/todos-list-react/
