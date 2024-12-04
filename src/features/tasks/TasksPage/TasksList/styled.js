@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 
 export const List = styled.ul`
@@ -19,10 +20,24 @@ export const Item = styled.li`
     `}
 `;
 
+export const StyledContentLink = styled(Link)`
+    text-decoration: none;
+    padding: 5px 3px;
+    color:${({ theme }) => theme.color.teal};
+
+    transition: 0.2s;
+        &:hover {            
+            box-shadow: -1px 1px 3px 0px #5246e53d;
+        }
+`;
+
 export const Content = styled.span`
-    ${({ $done }) => $done && css`
-        text-decoration: line-through;
-    `}
+    
+     ${({ $done }) => $done && css`
+        text-decoration: line-through;        
+     `}
+        
+       
 `;
 
 export const TaskButton = styled.button`
@@ -53,3 +68,4 @@ export const TaskButton = styled.button`
           }
      }
 `;
+
