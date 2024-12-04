@@ -29,6 +29,10 @@ In the header section of the task list, there is a button of hiding completed ta
    |                   |                   |  React Hooks      |
    |                   |                   |  Redux Toolkit    |
    |                   |                   |  Immer library    |
+   |                   |                   |  React-Router     |
+   |                   |                   |  Redux-Saga    |
+   |                   |                   |  NavLink + Styled components    |
+
 
 <br>
 
