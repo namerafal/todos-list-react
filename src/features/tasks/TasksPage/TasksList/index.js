@@ -23,8 +23,8 @@ const TasksList = () => {
           <TaskButton
             $toggleDone
             onClick={() => dispatch(toggleTaskDone(task.id))}
-          >
-            {task.done ? "✔" : " "}
+          >           
+            {task.done ? "✓" : " "}
           </TaskButton>
 
           <StyledContentLink to={`/zadania/${task.id}`}>
