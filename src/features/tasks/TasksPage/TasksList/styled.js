@@ -42,11 +42,11 @@ export const Content = styled.span`
 
 export const TaskButton = styled.button`
    && {
+     color: ${({ theme }) => theme.color.white};
      cursor: pointer;
      border: none;
      width: 30px;
      height: 30px;
-     color: ${({ theme }) => theme.color.white};
      transition: filter 0.5s;
 
        ${({ $toggleDone }) => $toggleDone && css`
