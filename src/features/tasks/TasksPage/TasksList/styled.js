@@ -43,7 +43,7 @@ export const Content = styled.span`
 export const TaskButton = styled.button`
 color: white;
    && {
-     color: ${({ theme }) => theme.color.white};
+     /* color: ${({ theme }) => theme.color.white}; */
      cursor: pointer;
      border: none;
      width: 30px;
