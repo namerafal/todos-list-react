@@ -19,8 +19,7 @@ export const Button = styled.button`
         }
 
         &:disabled {
-            color: ${({ theme }) => theme.color.alto};
-            filter: none;
+            color: ${({ theme }) => theme.color.nobel};            
         }
 
         @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
