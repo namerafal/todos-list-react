@@ -35,9 +35,7 @@ export const Content = styled.span`
     
      ${({ $done }) => $done && css`
         text-decoration: line-through;        
-     `}
-        
-       
+     `}       
 `;
 
 export const TaskButton = styled.button`

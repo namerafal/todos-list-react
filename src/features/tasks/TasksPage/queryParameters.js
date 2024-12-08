@@ -1,13 +1,11 @@
 import { useLocation, useHistory } from "react-router-dom";
 
-// Hook do pobierania wartości parametru zapytania
 export const useQueryParameter = (paramName) => {
     const location = useLocation();
     const queryParams = new URLSearchParams(location.search);
     return queryParams.get(paramName);
 };
 
-// Hook do zastępowania wartości parametru zapytania
 export const useReplaceQueryParameter = () => {
     const location = useLocation();
     const history = useHistory();

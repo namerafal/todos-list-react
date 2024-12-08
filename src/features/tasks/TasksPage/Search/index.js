@@ -11,8 +11,6 @@ const Search = () => {
             key: searchQueryParamName,
             value: target.value !== "" ? target.value : undefined,
         });
-
-       
     };
 
     return (
@@ -20,11 +18,10 @@ const Search = () => {
             <SearchInput
                 value={query || ""}
                 onChange={onInputChange}
-                placeholder="Wyszukaj zadanie. "
+                placeholder="Wyszukaj zadanie."
             />
         </SearchWrapper>
     )
-
 };
 
 export default Search
