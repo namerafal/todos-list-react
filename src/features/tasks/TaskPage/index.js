@@ -4,6 +4,7 @@ import { MainContainer } from "../../../GlobalStyle";
 import Header from "../../../common/Header";
 import AppSection from "../../../common/Section";
 import { getTaskById } from "../tasksSlice";
+import { ErrorHeader } from "../../../common/ErrorContent/styled";
 
 function TaskPage() {
     const { id } = useParams();
@@ -12,14 +13,20 @@ function TaskPage() {
         <MainContainer>
             <Header title="Szczegóły zadania" />
             <AppSection
-                title={task ? task.content : "Nie odnaleziono ID zadania!"}                
+                title={
+                    task ?
+                        task.content :
+                        <ErrorHeader>
+                            Nie odnaleziono ID zadania!
+                        </ErrorHeader>
+                }
                 body={
                     task ? (
                         <>
                             <strong>Ukończono:</strong> {task.done ? "Tak" : "Nie"}
                         </>
                     ) : (
-                        "Spróbuj ponownie z innym zadaniem."
+                        "Spróbuj ponownie z innym zadaniem. 🙂"
                     )
                 }
             />
