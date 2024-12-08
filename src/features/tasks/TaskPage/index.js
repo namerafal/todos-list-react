@@ -12,12 +12,15 @@ function TaskPage() {
         <MainContainer>
             <Header title="Szczegóły zadania" />
             <AppSection
-                title={task ? task.content : "NIe znaleziono zadania!"}
-                // body="Coś będzie w przyszłości 😎"
+                title={task ? task.content : "Nie odnaleziono ID zadania!"}                
                 body={
-                    <>
-                        <strong>Ukończono:</strong> {task.done ? "Tak" : "Nie"}
-                    </>
+                    task ? (
+                        <>
+                            <strong>Ukończono:</strong> {task.done ? "Tak" : "Nie"}
+                        </>
+                    ) : (
+                        "Spróbuj ponownie z innym zadaniem."
+                    )
                 }
             />
         </MainContainer>
