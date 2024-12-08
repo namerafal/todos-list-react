@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { getTasksFromLokalStorage } from './tasksLocalStorage';
+import { createSelector } from 'reselect';
 
 
 const tasksSlice = createSlice({
@@ -52,6 +53,7 @@ export const {
 } = tasksSlice.actions;
 
 export const selectTasksState = state => state.tasks;
+const selectQuery = (state, query) => query;
 
 export const selectTasks = state => selectTasksState(state).tasks;
 export const selectHideDone = state => selectTasksState(state).hideDone;
@@ -63,15 +65,16 @@ export const selectIsEveryTaskDone = state => selectTasks(state).every(({ done }
 export const getTaskById = (state, taskId) =>
     selectTasks(state).find(({ id }) => id === taskId)
 
-export const selectTasksByQuery = (state, query) => {
-    const tasks = selectTasks(state)
+export const selectTasksByQuery = createSelector(
+    [selectTasks, selectQuery],
+    (tasks, query) => {
+        if (!query || query.trim() === "") {
+            return tasks;
+        }
 
-    if (!query || query.trim() === "") {
-        return tasks;
+        return tasks.filter(({ content }) => content.toUpperCase().includes(query.trim().toUpperCase()));
     }
-
-    return tasks.filter(({ content }) => content.toUpperCase().includes(query.trim().toUpperCase()));
-}
+);
 
 
 export default tasksSlice.reducer;
