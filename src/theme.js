@@ -7,11 +7,12 @@ export const theme = {
         white: "#FFFFFF",
         crimson: "#DB143C",
         gallery: "#EDEDED",
+        moonRaker: "#CDCAF1",
         blackWhite: "#FFFFFD",
+        outerSpace: "#2C3A3A73",
         desertStorm: "#F1F0EF",
         forestGreen: "#1A7A1D",
         persianGreen: "#00ADAD",
-        outerSpace: "#2C3A3A73",
     },
 
     breakpoint: {
