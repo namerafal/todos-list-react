@@ -19,9 +19,11 @@ export const NavItem = styled.li`
 export const StyledNavLink = styled(NavLink)`
     text-decoration: none;    
     color: ${({ theme }) => theme.color.blackWhite};
-
-    &:hover {
-        border-bottom: 1px solid;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color 0.3s ease;        
+    
+    &:hover {        
+        border-bottom-color: currentColor; 
     }
 
     &.active {    
