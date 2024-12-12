@@ -24,10 +24,10 @@ export const StyledContentLink = styled(Link)`
     text-decoration: none;
     padding: 5px 3px;
     color:${({ theme }) => theme.color.teal};
+    transition: 0.5s;
 
-    transition: 0.2s;
         &:hover {            
-            box-shadow: -1px 1px 3px 0px #5246e53d;
+            box-shadow: -1px 1px 3px 0px ${({ theme }) => theme.color.moonRaker};
         }
 `;
 
